@@ -1,6 +1,6 @@
 
 #include "LinkedList.h"
-#include "data.h"
+#include "prisoner.h"
 #include <iostream>
 #include <limits>
 
