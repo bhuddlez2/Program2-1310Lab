@@ -11,7 +11,7 @@ TARGET = driver
 TARGET_DEL = driver.exe
 
 # Source files
-SRCS = driver.cpp data.cpp prisoner.cpp
+SRCS = driver.cpp prisoner.cpp LinkedList.cpp
 
 # Object files
 OBJS = $(SRCS:.cpp=.o)
