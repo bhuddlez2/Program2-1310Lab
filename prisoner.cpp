@@ -21,8 +21,9 @@ Prisoner::Prisoner(int id, string name, int sentenceYears, string lastMeal)
     void Prisoner::setLastMeal(string meal){
         lastMeal = meal;
     }
-
-
+    int Prisoner::getID() const {
+    return id;
+    }
 // Overload operators
 bool Prisoner::operator<(const Prisoner& other) const {
     return id < other.id;

@@ -25,6 +25,7 @@ public:
     void setName(string newName);
     void setSentenceYears(int years);
     void setLastMeal(string meal);
+     int getID() const;
 
     // Operator overloads for comparison
     bool operator<(const Prisoner& other) const;
