@@ -19,6 +19,12 @@ public:
     Prisoner();
     Prisoner(int id, string name, int sentenceYears, string lastMeal);
 
+    // Getters
+    int getID() const;
+    string getName() const;
+    int getSentenceYears() const;
+    string getLastMeal() const;
+
     // Setters
 
     void setID(int newID);
