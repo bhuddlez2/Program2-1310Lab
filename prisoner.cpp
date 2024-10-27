@@ -5,6 +5,23 @@
 Prisoner::Prisoner(int id, string name, int sentenceYears, string lastMeal)
     : id(id), name(name), sentenceYears(sentenceYears), lastMeal(lastMeal) {}
 
+// Getters
+int Prisoner::getID() const {
+    return id;
+}
+
+string Prisoner::getName() const {
+    return name;
+}
+
+int Prisoner::getSentenceYears() const {
+    return sentenceYears;
+}
+
+string Prisoner::getLastMeal() const {
+    return lastMeal;
+}
+
     // Setters
     void Prisoner::setID(int newID){
         id = newID;
