@@ -11,25 +11,26 @@ class Prisoner {
 
 private:
     // Stuff that's not easily accessible
-    int id, sentenceYears;
-    string name, lastMeal; 
+    string id, sentenceYears, firstName, lastName, lastMeal; 
 
 public:
     //Stuff that is easily accessible
     Prisoner();
-    Prisoner(int id, string name, int sentenceYears, string lastMeal);
+    Prisoner(string id, string firstName, string lastName, string sentenceYears, string lastMeal);
 
     // Getters
-    int getID() const;
-    string getName() const;
-    int getSentenceYears() const;
+    string getID() const;
+    string getFirstName() const;
+    string getLastName() const;
+    string getSentenceYears() const;
     string getLastMeal() const;
 
     // Setters
 
-    void setID(int newID);
-    void setName(string newName);
-    void setSentenceYears(int years);
+    void setID(string newID);
+    void setFirstName(string newFirstName);
+    void setLastName(string newLastName);
+    void setSentenceYears(string years);
     void setLastMeal(string meal);
 
     // Operator overloads for comparison
