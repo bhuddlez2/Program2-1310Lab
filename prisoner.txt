@@ -1,0 +1,12 @@
+0101 David Koresh 99 Lasanga
+0123 Jim Jones 99 KoolAid
+0154 Charlie Manson 99 Acid
+0174 Marshall Applewhite 78 Burger
+0216 Jeffrey Dahamer 99 BBQ
+0237 Ted Kaczynski 99 Salad
+0245 Ted Bundy 99 Tacos
+0287 Brandon Vandergriff 28 chikfila
+0299 Byron Looper 99 Mcdonalds
+0315 Richie Ramirez 99 TacoBell
+0324 Hannibal Lector 99 Favabeans
+0337 Sean Combs 99 BabyOil
