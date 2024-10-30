@@ -145,6 +145,7 @@ LinkedList::~LinkedList() {
 
 void LinkedList::loadPrisoners()
 {
+    int i=0;
     ifstream inputFile("prisoner.txt");
     if (!inputFile.is_open())
     {
@@ -152,5 +153,10 @@ void LinkedList::loadPrisoners()
         return;
     }
     
-    string firstName, lastName, 
+    string ID, firstName, lastName, years, meal;
+    while (inputFile >> ID >> firstName >> lastName >> years >> meal)
+    {
+        Prisoner* prisoner = new Prisoner(ID, firstName, lastName, years, meal);
+        insertNode(i, *prisoner);
+    }
 }

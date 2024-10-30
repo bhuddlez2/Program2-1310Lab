@@ -16,7 +16,7 @@ private:
 public:
     //Stuff that is easily accessible
     Prisoner();
-    Prisoner(string id, string firstName, string lastName, string sentenceYears, string lastMeal);
+    Prisoner(const string& id, const string& firstName, const string& lastName, const string& sentenceYears, const string& lastMeal);
 
     // Getters
     string getID() const;
