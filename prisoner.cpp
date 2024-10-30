@@ -2,19 +2,23 @@
 
 
     // Constructors
-Prisoner::Prisoner(int id, string name, int sentenceYears, string lastMeal)
-    : id(id), name(name), sentenceYears(sentenceYears), lastMeal(lastMeal) {}
+Prisoner::Prisoner(string id, string firstName, string lastName, string sentenceYears, string lastMeal)
+    : id(id), firstName(firstName), lastName(lastName), sentenceYears(sentenceYears), lastMeal(lastMeal) {}
 
 // Getters
-int Prisoner::getID() const {
+string Prisoner::getID() const {
     return id;
 }
 
-string Prisoner::getName() const {
-    return name;
+string Prisoner::getFirstName() const {
+    return firstName;
 }
 
-int Prisoner::getSentenceYears() const {
+string Prisoner::getLastName() const {
+    return lastName;
+}
+
+string Prisoner::getSentenceYears() const {
     return sentenceYears;
 }
 
@@ -23,23 +27,24 @@ string Prisoner::getLastMeal() const {
 }
 
     // Setters
-    void Prisoner::setID(int newID){
+    void Prisoner::setID(string newID){
         id = newID;
     }
 
-    void Prisoner::setName(string newName){
-        name = newName;
-    }
+    void Prisoner::setFirstName(string newFirstName) {
+    firstName = newFirstName;
+}
 
-    void Prisoner::setSentenceYears(int years){
+void Prisoner::setLastName(string newLastName) {
+    lastName = newLastName;
+}
+
+    void Prisoner::setSentenceYears(string years){
         sentenceYears = years;
     }
 
     void Prisoner::setLastMeal(string meal){
         lastMeal = meal;
-    }
-    int Prisoner::getID() const {
-    return id;
     }
 // Overload operators
 bool Prisoner::operator<(const Prisoner& other) const {
@@ -57,7 +62,8 @@ bool Prisoner::operator==(const Prisoner& other) const {
 // Stream operator overload and prints out stuff
 ostream& operator<<(ostream& os, const Prisoner& prisoner) {
     os << "ID: " << prisoner.id
-       << ", Name: " << prisoner.name
+       << ", First Name: " << prisoner.firstName
+       << ", Last Name: " << prisoner.lastName
        << ", Sentence: " << prisoner.sentenceYears << " years"
        << ", What is the Prisoner's Last Meal? " << prisoner.lastMeal;
     return os;
