@@ -8,7 +8,10 @@ using namespace std;
 
 int main()
 {
+    LinkedList linkedList;
     int choice;
+
+    linkedList.loadPrisoners();
 
     do
     {
@@ -23,7 +26,7 @@ int main()
         switch(choice)
         {
             case 1:
-                
+
 
                 break;
             case 2:
