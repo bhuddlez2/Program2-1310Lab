@@ -31,7 +31,7 @@ public:
     Prisoner getNodeValue(int index); // Return a Prisoner at index
     void appendNode(const Prisoner &prisoner); // Accepts a Prisoner object
     void insertNode(int index, const Prisoner &prisoner);
-    void deleteNode(int id); // Deletes based on unique prisoner ID
+    void deleteNode(string id); // Deletes based on unique prisoner ID
     void displayList() const; // Displays the list of prisoners
     //still need sorting function
     void loadPrisoners(); // Loads in the prisoners from the txt file

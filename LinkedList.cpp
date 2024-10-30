@@ -93,7 +93,7 @@ void LinkedList::displayList() const {
 }
 
 // Delete a prisoner by ID
-void LinkedList::deleteNode(int id) {
+void LinkedList::deleteNode(string id) {
     if (!head) return; // List is empty
 
     ListNode *nodePtr = head;
