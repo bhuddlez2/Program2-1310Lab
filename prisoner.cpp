@@ -2,7 +2,7 @@
 
 
     // Constructors
-Prisoner::Prisoner(string id, string firstName, string lastName, string sentenceYears, string lastMeal)
+Prisoner::Prisoner(const string& id, const string& firstName, const string& lastName, const string& sentenceYears, const string& lastMeal)
     : id(id), firstName(firstName), lastName(lastName), sentenceYears(sentenceYears), lastMeal(lastMeal) {}
 
 // Getters
