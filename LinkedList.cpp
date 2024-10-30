@@ -1,6 +1,7 @@
 #include "LinkedList.h"
 #include "prisoner.h"
 #include <iostream>
+#include <fstream>
 
  using namespace std;
 
@@ -140,4 +141,16 @@ LinkedList::~LinkedList() {
         delete nodePtr;
         nodePtr = nextNode;
     }
+}
+
+void LinkedList::loadPrisoners()
+{
+    ifstream inputFile("prisoner.txt");
+    if (!inputFile.is_open())
+    {
+        cout << "Error opening file: " << "prisoner.txt" << endl;
+        return;
+    }
+    
+    string firstName, lastName, 
 }

@@ -33,7 +33,8 @@ public:
     void insertNode(int index, const Prisoner &prisoner);
     void deleteNode(int id); // Deletes based on unique prisoner ID
     void displayList() const; // Displays the list of prisoners
-    //still need sorting functiona
+    //still need sorting function
+    void loadPrisoners(); // Loads in the prisoners from the txt file
 };
 
 
