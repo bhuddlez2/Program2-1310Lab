@@ -172,3 +172,57 @@ bool LinkedList::IDCheck(const string& id) const {
     return false; // ID not found
 }
 
+// sort prisoners by last name
+void LinkedList::sortByLastName() {
+    if (isEmpty()) return;
+
+    for (int i = 0; i < size - 1; ++i) {
+        ListNode* current = head;
+        for (int j = 0; j < size - i - 1; ++j) {
+            if (current->value.getLastName() > current->next->value.getLastName()) {
+                // Swap values
+                Prisoner temp = current->value;
+                current->value = current->next->value;
+                current->next->value = temp;
+            }
+            current = current->next;
+        }
+    }
+}
+
+// Sort prisoners by sentence years
+void LinkedList::sortByYears() {
+    if (isEmpty()) return;
+
+    for (int i = 0; i < size - 1; ++i) {
+        ListNode* current = head;
+        for (int j = 0; j < size - i - 1; ++j) {
+            if (stoi(current->value.getSentenceYears()) > stoi(current->next->value.getSentenceYears())) {
+                // Swap values
+                Prisoner temp = current->value;
+                current->value = current->next->value;
+                current->next->value = temp;
+            }
+            current = current->next;
+        }
+    }
+}
+
+// Sort prisoners by ID
+void LinkedList::sortByID() {
+    if (isEmpty()) return;
+
+    for (int i = 0; i < size - 1; ++i) {
+        ListNode* current = head;
+        for (int j = 0; j < size - i - 1; ++j) {
+            if (current->value.getID() > current->next->value.getID()) {
+                // Swap values
+                Prisoner temp = current->value;
+                current->value = current->next->value;
+                current->next->value = temp;
+            }
+            current = current->next;
+        }
+    }
+}
+

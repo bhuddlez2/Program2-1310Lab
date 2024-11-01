@@ -52,13 +52,13 @@ int main()
 
                 switch (sortChoice) {
                     case 1:
-                        //linkedList.sortByLastName();
+                        linkedList.sortByLastName();
                         break;
                     case 2:
-                        //linkedList.sortByYears(); // You'll need to implement this
+                        linkedList.sortByYears();
                         break;
                     case 3:
-                        //linkedList.sortByID();
+                        linkedList.sortByID();
                         break;
                     default:
                     cout << "Invalid choice.\n";

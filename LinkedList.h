@@ -36,6 +36,9 @@ public:
     //still need sorting function
     void loadPrisoners(); // Loads in the prisoners from the txt file
     bool IDCheck(const string& id) const; // checks if prisoner ID is correct
+    void sortByLastName(); // Sort prisoners by last name
+    void sortByYears();     // Sort prisoners by sentence years
+    void sortByID();        // Sort prisoners by ID
 };
 
 
