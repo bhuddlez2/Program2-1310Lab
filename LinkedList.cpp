@@ -160,3 +160,15 @@ void LinkedList::loadPrisoners()
         insertNode(i, *prisoner);
     }
 }
+
+bool LinkedList::IDCheck(const string& id) const {
+    ListNode* nodePtr = head;
+    while (nodePtr) {
+        if (nodePtr->value.getID() == id) {
+            return true; // ID found
+        }
+        nodePtr = nodePtr->next;
+    }
+    return false; // ID not found
+}
+
