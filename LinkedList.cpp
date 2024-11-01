@@ -2,6 +2,7 @@
 #include "prisoner.h"
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 
  using namespace std;
 
@@ -34,7 +35,7 @@ Prisoner LinkedList::getNodeValue(int position) {
 
 // Append a prisoner to the end of the list
 void LinkedList::appendNode(const Prisoner &prisoner) {
-    ListNode *newNode = new ListNode{prisoner, nullptr, tail};
+    ListNode *newNode = new ListNode(prisoner, nullptr, tail);
 
     if (!head) {
         head = newNode;
@@ -52,7 +53,7 @@ void LinkedList::insertNode(int position, const Prisoner &prisoner) {
         throw std::out_of_range("Index out of range");
     }
 
-    ListNode *newNode = new ListNode{prisoner, nullptr, nullptr};
+    ListNode *newNode = new ListNode(prisoner,nullptr,nullptr);
 
     if (position == 0) {
         newNode->next = head;
@@ -86,10 +87,23 @@ void LinkedList::insertNode(int position, const Prisoner &prisoner) {
 void LinkedList::displayList() const {
     ListNode *nodePtr = head;
 
+     // Print the header
+    cout << left << setw(10) << "ID" 
+         << setw(15) << "First Name" 
+         << setw(15) << "Last Name" 
+         << setw(10) << "Sentence" 
+         << setw(25) << "Last Meal" << endl;
+
+    cout << string(75, '-') << endl; // Line separator
+
     while (nodePtr) {
-        cout << nodePtr->value << endl; // Using the overloaded operator<< for Prisoner
+        cout << left << setw(10) << nodePtr->value.getID() 
+             << setw(15) << nodePtr->value.getFirstName() 
+             << setw(15) << nodePtr->value.getLastName() 
+             << setw(10) << nodePtr->value.getSentenceYears() 
+             << setw(25) << nodePtr->value.getLastMeal() << endl;
         nodePtr = nodePtr->next;
-    }
+}
 }
 
 // Delete a prisoner by ID
@@ -156,8 +170,8 @@ void LinkedList::loadPrisoners()
     string ID, firstName, lastName, years, meal;
     while (inputFile >> ID >> firstName >> lastName >> years >> meal)
     {
-        Prisoner* prisoner = new Prisoner(ID, firstName, lastName, years, meal);
-        insertNode(i, *prisoner);
+        Prisoner prisoner(ID, firstName, lastName, years, meal);
+        insertNode(i, prisoner);
     }
 }
 
