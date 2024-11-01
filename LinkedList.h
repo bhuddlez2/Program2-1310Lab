@@ -35,6 +35,7 @@ public:
     void displayList() const; // Displays the list of prisoners
     //still need sorting function
     void loadPrisoners(); // Loads in the prisoners from the txt file
+    bool IDCheck(const string& id) const; // checks if prisoner ID is correct
 };
 
 
